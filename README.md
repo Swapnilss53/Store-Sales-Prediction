@@ -59,11 +59,11 @@ Both CSS and HTML files are being created and are being integrated with the crea
 
 ## Project Link - 
 ```
-https://storesalesprediction-2gn2t3crrjnnh8kptxtlhq.streamlit.app/
+
 ```
 
 ## Vedio Url - 
 ```
-https://youtu.be/N4BAEqE9To4?si=eqMiwijfHjaZEQli
+
 ```
 
