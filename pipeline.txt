@@ -1,0 +1,31 @@
+#Data Ingestion
+1.we will define variable in our constant file
+2.after creating variable we will connect in config file
+3.after completing both steps we will start our data ingestion pipeline
+
+#Data Transformation
+1.we will define variable in our constant file
+2.after creating variable we will connect in config file
+3.after completing both steps we will start our data transformation pipeline
+4.if required we will use utils file
+
+#Model Training 
+1.we will define variable in our constant file
+2.after creating variable we will connect in config file
+3.after completing both steps we will start our Model Training pipeline 
+4.if required we will use utils function
+
+#Batch Prediction
+1.we will define variable in our constant file
+2.after creating variable we will connect in config file
+3.after completing both steps we will start our Batch Prediction
+4.if required we will use utils function
+
+#Training pipeline
+1. define training pipeline in pipeline folder for train model
+
+#Prediction Pipeline 
+1. define prediction pipeline for make prediction on new data
+
+#Application
+1.connect all the pipeline in app.py for creating a user friendly interface

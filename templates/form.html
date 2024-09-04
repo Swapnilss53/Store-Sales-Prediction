@@ -1,0 +1,189 @@
+
+
+<style>
+  .page {
+    content: "";
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 125px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .container{
+      margin: 10% auto;
+      width: 810px;
+      color: #fff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #000;
+      opacity: 0.7;
+  }
+  .section{
+      opacity: 1;
+      padding: 10px;
+      display: inline-block;
+      font-size: 1.25em;
+      margin-right: 20px;
+      min-width: 360px;
+  }
+  .title{
+      width:50%;
+      float: left;
+  }
+  .description{
+      width:50%;
+      float: left;
+  }
+  input, select{
+      padding: 10px;
+      width: 150px;
+  }
+</style>
+<div>
+  <form action="{{url_for('predict_datapoint')}}" method="POST">
+  <h1 style="background-color: skyblue; text-align: center; padding: 30px 0; font-size: 3em;">STORE SALES PREDICTION</h1>
+  <div class="page">
+      <div class="container">
+
+
+        
+        <div class="section">
+          <div class="title">Item_Fat_Content</div>
+          <div class="description">
+            <select id="Item_Fat_Content" name="Item_Fat_Content">
+              <option value="Low Fat">Low Fat</option>
+              <option value="Regular">Regular</option>
+            </select>
+          </div>
+        </div>
+
+
+
+        
+
+      <div class="section">
+        <div class="title">Item_Visibility</div>
+        <div class="description">
+            <input type="text" id="Item_Visibility" name="Item_Visibility" placeholder="Item Visibility (float)">
+        </div>
+      </div>
+
+
+
+
+
+      <div class="section">
+        <div class="title">Item_Type</div>
+        <div class="description">
+          <select id="Item_Type" name="Item_Type">
+            <option value="Fruits and Vegetables">Fruits and Vegetables</option>
+            <option value="Snack Foods">Snack Foods</option>
+            <option value="Household">Household</option>
+            <option value="Frozen Foods">Frozen Foods</option>
+            <option value="Dairy">Dairy</option>
+            <option value="Canned">Canned</option>
+            <option value="Baking Goods">Baking Goods</option>
+            <option value="Health and Hygiene">Health and Hygiene</option>
+            <option value="Soft Drinks">Soft Drinks</option>
+            <option value="Meat">Meat</option>
+            <option value="Breads">Breads</option>
+            <option value="Hard Drinks">Hard Drinks</option>
+            <option value="Others">Others</option>
+            <option value="Starchy Foods">Starchy Foods</option>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Seafood">Seafood</option>
+          </select>
+        </div>
+      </div>
+
+
+
+
+      <div class="section">
+        <div class="title">Item_MRP</div>
+        <div class="description">
+            <input type="text" id="Item_MRP" name="Item_MRP" placeholder="Enter  MRP (float)">
+        </div>
+      </div>
+
+
+
+      <div class="section">
+        <div class="title">Outlet_Identifier</div>
+        <div class="description">
+          <select id="Outlet_Identifier" name="Outlet_Identifier">
+            <option value="OUT010">OUT010</option>
+            <option value="OUT013">OUT013</option>
+            <option value="OUT017">OUT017</option>
+            <option value="OUT018">OUT018</option>
+            <option value="OUT019">OUT019</option>
+            <option value="OUT027">OUT027</option>
+            <option value="OUT035">OUT035</option>
+            <option value="OUT045">OUT045</option>
+            <option value="OUT046">OUT046</option>
+            <option value="OUT049">OUT049</option>
+          </select>
+        </div>
+      </div>
+
+
+
+      <div class="section">
+        <div class="title">Outlet_Establishment_Year</div>
+        <div class="description">
+            <input type="text" id="Outlet_Establishment_Year" name="Outlet_Establishment_Year" placeholder="Enter  YEAR">
+        </div>
+      </div>
+
+
+    
+
+      <div class="section">
+        <div class="title">Outlet_Location_Type</div>
+        <div class="description">
+          <select id="Outlet_Location_Type" name="Outlet_Location_Type">
+            <option value="Tier 1">Tier 1</option>
+            <option value="Tier 2">Tier 2</option>
+            <option value="Tier 3">Tier 3</option>
+          </select>
+        </div>
+      </div>
+
+
+
+
+      <div class="section">
+        <div class="title">Outlet_Type</div>
+        <div class="description">
+          <select id="Outlet_Type" name="Outlet_Type">
+            <option value="Supermarket Type1">Supermarket Type1</option>
+            <option value="Supermarket Type2">Supermarket Type2</option>
+            <option value="Supermarket Type3">Supermarket Type3</option>
+            <option value="Grocery Store">Grocery Store</option>
+          </select>
+        </div>
+      </div>
+
+
+
+    
+      
+
+      
+
+          <div style="width:100%; float: left; text-align: center;">
+ 
+              <input type="submit" value="Submit" style="width: 200px; height: 50px; background-color: rgb(247, 8, 8); color: white; font-size: 23px;">
+         
+            </div>
+            
+            <h1><h1>Predicted Store Sales is  {{final_result}} </h1></h1>
+              
+              
+          </form>
+      </div>
+  </div>
+
+</div>
